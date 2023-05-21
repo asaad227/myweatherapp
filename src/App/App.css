@@ -5,7 +5,7 @@
 
 .header{
   font-style: italic;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   font-size: 2rem;
   font-weight: 200;
@@ -23,7 +23,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   background-color: #f5f5f5;
   border: 1px solid #333;
   border-radius: 5px;
@@ -38,8 +38,7 @@
 }
 
 .App input:hover{
-  background-color: #333;
-  color: #f5f5f5;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.4);
 }
 .App button{
   width: 25%;
@@ -49,7 +48,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   background-color: #f5f5f5;
   border: 1px solid #333;
   border-radius: 5px;
@@ -63,8 +62,7 @@
 }
 
 .App button:hover{
-  background-color: #333;
-  color: #f5f5f5;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -76,14 +74,14 @@
   width: 25%;
   height: 25%;
   margin: 20px auto;
-  box-shadow: 2px 6px 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #f5f5f5;
 
 }
 
 .flex-container:hover {
-  box-shadow: 2px 6px 2px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 
