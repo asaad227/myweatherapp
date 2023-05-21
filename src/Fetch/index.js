@@ -22,7 +22,7 @@ export default function Fetch() {
     
 
   return (
-    <div>
+    <div className='flex-container'>
         <h1>My Weather App</h1>
         {loading && <p>Loading...</p>}
         {error && <p>Something went wrong: {error.message}</p>}
