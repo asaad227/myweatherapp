@@ -52,6 +52,7 @@ function App() {
 
   return (
     <div className='App'>
+      <h1 className='header'>Weather App</h1>
       <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder='Enter your location here....' />
       <button type="button" onClick={fetchData}>Search</button>
   

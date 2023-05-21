@@ -7,7 +7,6 @@ export default function WeatherLocation({data,loading,error}) {
 
   return (
     <div className='flex-container'>
-        {/* <h1>My Weather App</h1> */}
         {loading && <p>Loading...</p>}
         {error && <p>Something went wrong: {error.message}</p>}
         {data && (  
