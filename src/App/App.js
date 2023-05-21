@@ -6,7 +6,10 @@ import Fetch from '../Fetch';
 function App() {
   return (
     <div className="App">
-      <Fetch/>
+    <div className='flex-container'>
+    <Fetch/>
+    </div>
+  
     </div>
   );
 }

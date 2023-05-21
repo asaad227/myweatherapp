@@ -27,7 +27,7 @@ export default function Fetch() {
         {loading && <p>Loading...</p>}
         {error && <p>Something went wrong: {error.message}</p>}
         {data && (  
-            <div>
+            <div >
                 <h1>{data.location.name}</h1>
                 <p>{data.location.region}</p>
                 <p>{data.location.country}</p>
