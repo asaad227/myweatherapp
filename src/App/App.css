@@ -106,14 +106,29 @@
   color: #333;
 
 }
-
+.flex-forecast{
+  display: flex;
+  flex-direction: row;
+}
+.forecast-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin-left: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
 
 
 
 @media screen and (max-width: 768px) {
   .App {
-    width: 90vw;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -125,6 +140,22 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+.flex-forecast{
+  display: flex;
+  flex-direction: row;
+}
+.forecast-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 5px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
   .App input{
     width: 63%;
     margin: 5px auto;
@@ -188,5 +219,12 @@
   .flex-container p {
     font-size: 0.8rem;
   }
+
+
+
+
+
+
+
 
   
