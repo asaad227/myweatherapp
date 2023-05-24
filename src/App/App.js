@@ -9,12 +9,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [location, setLocation] = useState("");
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")) || "");
-
- useEffect(() => {
-  fetchData();
-  fetchWeekData();
-}, [items]);
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")) || "London");
 
 useEffect(() => {
   localStorage.setItem("items", JSON.stringify(items));
@@ -26,16 +21,7 @@ useEffect(() => {
     setError(null);
     setData(null);
     try {
-      if (items === "") {
-        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=London&aqi=no`);
-        if (response.ok) {
-          const json = await response.json();
-          setData(json);
-         
-        } else {
-          throw response;
-        }
-      }else{
+     
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=${items}&aqi=no`);
         if (response.ok) {
           const json = await response.json();
@@ -44,7 +30,7 @@ useEffect(() => {
         } else {
           throw response;
         }
-      }
+      
     }catch (error) {
       console.error("Error fetching data: ", error);
       setError(error);
@@ -58,16 +44,6 @@ useEffect(() => {
     setError(null);
     setData(null);
     try {
-      if (items === "") {
-      const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=London&days=7`);
-        if (response.ok) {
-          const json = await response.json();
-          setData(json);
-
-        } else {
-          throw response;
-        }
-      }else{
         const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${items}&days=7`);
         if (response.ok) {
           const json = await response.json();
@@ -76,7 +52,7 @@ useEffect(() => {
         } else {
           throw response;
         }
-      }
+      
     }catch (error) {
       console.error("Error fetching data: ", error);
       setError(error);
@@ -99,7 +75,11 @@ function handleFunctin(){
   }
 }
 
- 
+useEffect(() => {
+  fetchData();
+  fetchWeekData();
+}, [items]);
+
 
   return (
     <div className='App'>
