@@ -10,7 +10,7 @@ export default function WeatherLocation({data,loading,error}) {
         {loading && <p>Loading...</p>}
         {error && <p>Something went wrong: {error.message}</p>}
         {data && (  
-            <div >
+            <div className="container">
                 <h1>{data.location.name}</h1>
                 <p>{data.location.region}</p>
                 <p>{data.location.country}</p>
